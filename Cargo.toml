@@ -1,0 +1,20 @@
+[package]
+workspace = "../../OMNIBUS"
+name = "rafce"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+memmap2 = "0.9"
+itoa = "1.0"
+libc = "0.2"
+dsce-types = { path = "../../dsce-types" }
+
+[dev-dependencies]
+criterion = "0.5"
+proptest = "1.4"
+crossbeam-channel = "0.5"
+
+[[bench]]
+name = "audit_performance"
+harness = false
